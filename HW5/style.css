@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.center {
+    padding-left: calc(50% - 585px);
+    padding-right: calc(50% - 585px);
+
+}
+
+.header {
+    padding-top: 40px;
+    padding-bottom: 84px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__link {
+    display: flex;
+    align-items: center;
+}
+
+.logo__txt {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 14px;
+}
+
+.logo__txt-color {
+    color: #F25822;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu__link {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.menu__link_active {
+    color: #F25822;
+}
+
+.top__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top__title {
+    width: 522px;
+    color: #000;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 17px;
+}
+
+.top__info-txt {
+    width: 466px;
+    color: #888;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 37px;
+}
+
+.top__btn {
+    margin-bottom: 162px;
+}
+
+.button {
+    border-radius: 50px;
+    background: #F25822;
+    box-shadow: 4px 4px 8px 0px rgba(242, 88, 34, 0.20);
+    padding: 16px 36px;
+    border: none;
+    color: #FFFFFF;
+}
+
+.button-video {
+    background-color: #fff;
+    color: #AAA;
+    box-shadow: none;
+}
+
+.top__logos {
+    padding-top: 96px;
+    padding-bottom: 96px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_us {
+    background: #FAFAFA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about_us__title {
+    width: 409px;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.about_us__txt {
+    width: 515px;
+    color: #666;
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 35px;
+}
+
+.features {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.features__item {
+    width: 310px;
+}
+
+.features__item_big {
+    width: 370px;
+    padding: 40px 30px 25px;
+    background: #FFF;
+    box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
+}
+
+.features__img {
+    margin-bottom: 25px;
+}
+
+.features__title {
+    margin-bottom: 17px;
+    font-family: Gilroy-Bold;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.features__txt {
+    margin-bottom: 25px;
+    color: #666;
+    font-family: Gilroy-Regular;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.features__link {
+    color: #000;
+    font-family: Gilroy-Bold;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.services {
+    background: #FAFAFA;
+    padding-top: 92px;
+    padding-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services__title {
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 19px;
+
+}
+
+.services__txt {
+    width: 682px;
+    color: #666;
+    font-family: Gilroy-Regular;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.services__items {
+    display: grid;
+    grid-template-columns: repeat(3, 370px);
+    gap: 30px;
+}
+
+.services__card {
+    padding: 0 30px 50px;
+    text-align: center;
+    background: #FFF;
+}
+
+.services__card-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 22px;
+}
+
+.services__card-txt {
+    color: #AAA;
+    text-align: center;
+    font-family: Gilroy-Regular;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 39px;
+}
+
+.services__btn {
+    padding: 15px 26px 15px 46px;
+}
+
+.fa-chevron-right {
+    padding-left: 6px;
+}
