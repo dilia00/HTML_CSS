@@ -22,7 +22,6 @@ body {
     padding-top: 18px;
     padding-bottom: 19px;
     display: flex;
-
     justify-content: space-between;
     align-items: center;
 }
@@ -135,6 +134,7 @@ body {
     width: 50%;
     background: url(img/top_img.png) 100% no-repeat;
     background-size: cover;
+    background-position: bottom center;
     min-height: 764px;
 }
 
@@ -162,7 +162,7 @@ body {
     padding-bottom: 96px;
     display: grid;
     gap: 30px;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 260px 180px;
 }
 
@@ -175,6 +175,7 @@ body {
     text-align: center;
     padding-top: 105px;
     padding-bottom: 105px;
+    background-position: bottom center;
 }
 
 .offer__span {
@@ -184,22 +185,22 @@ body {
 }
 
 .offer__item_1 {
-    background: url(img/offer_bg.svg), url(img/offer_1.png);
+    background: url(img/offer_bg.svg), url(img/offer_1.png) no-repeat;
 }
 
 .offer__item_2 {
-    background: url(img/offer_bg.svg), url(img/offer_2.png);
+    background: url(img/offer_bg.svg), url(img/offer_2.png) no-repeat;
 }
 
 .offer__item_3 {
-    background: url(img/offer_bg.svg), url(img/offer_3.png);
+    background: url(img/offer_bg.svg), url(img/offer_3.png) no-repeat;
 }
 
 .offer__item4 {
     grid-column: 1/ -1;
     padding-top: 65px;
     padding-bottom: 65px;
-    background: url(img/offer_bg.svg), url(img/offer_4.png);
+    background: url(img/offer_bg_big.svg), url(img/offer_4.png) no-repeat;
 }
 
 .products {
@@ -240,6 +241,10 @@ body {
 .products__img {
     position: relative;
 
+}
+
+.products__pic {
+    width: 100%;
 }
 
 .products__img:hover .products-card__overlay {
@@ -327,4 +332,58 @@ body {
 .products__button:hover {
     background: #F16D7F;
     color: #FFF;
+}
+
+@media (max-width: 1024px) {
+    .center {
+        padding-left: calc(50% - 368px);
+        padding-right: calc(50% - 368px);
+    }
+
+    .promo__img {
+        min-height: 368px;
+    }
+
+    .promo__title {
+        font-size: 44px;
+    }
+
+    .promo__title_span {
+        font-size: 24px;
+    }
+
+    .offer {
+        padding-bottom: 109px;
+        gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 168px 116px;
+    }
+
+    .offer__item {
+        padding-top: 58px;
+        padding-bottom: 58px;
+        background-size: cover;
+        background-position: bottom center;
+
+    }
+
+    .offer__item4 {
+        padding-top: 33px;
+        padding-bottom: 33px;
+    }
+
+    .products__text {
+        margin-bottom: 74px;
+    }
+
+    .products__items {
+        gap: 16px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin-bottom: 32px;
+    }
+
+    .products__button {
+        margin-bottom: 70px;
+    }
 }
