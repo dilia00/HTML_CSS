@@ -30,8 +30,12 @@ body {
     padding-right: 41px;
 }
 
-.header__icon:hover {
-    stroke: #F16D7F;
+.header__icon path {
+    transition: all 0.3s;
+}
+
+.header__icon:hover path {
+    fill: #F16D7F;
 }
 
 .header__icon:active {
@@ -185,22 +189,22 @@ body {
 }
 
 .offer__item_1 {
-    background: url(img/offer_bg.svg), url(img/offer_1.png) no-repeat;
+    background: url(img/offer_bg.svg), url(img/offer_1.jpg) no-repeat;
 }
 
 .offer__item_2 {
-    background: url(img/offer_bg.svg), url(img/offer_2.png) no-repeat;
+    background: url(img/offer_bg.svg), url(img/offer_2.jpg) no-repeat;
 }
 
 .offer__item_3 {
-    background: url(img/offer_bg.svg), url(img/offer_3.png) no-repeat;
+    background: url(img/offer_bg.svg), url(img/offer_3.jpg) no-repeat;
 }
 
 .offer__item4 {
     grid-column: 1/ -1;
     padding-top: 65px;
     padding-bottom: 65px;
-    background: url(img/offer_bg_big.svg), url(img/offer_4.png) no-repeat;
+    background: url(img/offer_bg_big.svg), url(img/offer_4.jpg) no-repeat;
 }
 
 .products {
@@ -248,19 +252,20 @@ body {
 }
 
 .products__img:hover .products-card__overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    transform: scale(1);
 }
 
 .products-card__overlay {
-    display: none;
     position: absolute;
     top: 0;
     background: rgba(58, 56, 56, 0.86);
     width: 100%;
     height: 100%;
-    transition: 1s;
+    transform: scale(0);
+    transition: transform 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .products-card__btn {
@@ -273,14 +278,24 @@ body {
     font-weight: 400;
     line-height: normal;
     padding: 13px 15px 14px;
+    transition: all 0.3s;
 }
 
+.products-card__btn path {
+    transition: all 0.3s;
+}
 
 .products-card__btn:hover {
     color: rgba(58, 56, 56, 0.86);
     background: #FFF;
-    stroke: rgba(58, 56, 56, 0.86);
+}
 
+.products-card__btn:hover path {
+    fill: rgba(58, 56, 56, 0.86);
+}
+
+.products-card__btn:active {
+    opacity: 0.5;
 }
 
 .products-card__svg {
@@ -327,12 +342,190 @@ body {
     font-weight: 400;
     line-height: normal;
     margin-bottom: 60px;
+    transition: all 0.3s;
 }
 
 .products__button:hover {
     background: #F16D7F;
     color: #FFF;
 }
+
+.products__button:active {
+    opacity: 0.5;
+}
+
+.feature {
+    background: #222224;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 104px;
+    padding-bottom: 104px;
+    color: #FBFBFB;
+    text-align: center;
+    font-style: normal;
+    line-height: normal;
+}
+
+.feature__img-1 {
+    margin-bottom: 28px;
+}
+
+.feature__img-2 {
+    margin-bottom: 19px;
+}
+
+.feature__img-3 {
+    margin-bottom: 25px;
+}
+
+.feature__title {
+    margin-bottom: 16px;
+    font-size: 19.96px;
+    font-weight: 400;
+}
+
+.feature__txt {
+    width: 300px;
+    font-size: 13.972px;
+    font-weight: 300;
+}
+
+.subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 97px;
+    padding-bottom: 126px;
+    color: #222224;
+    text-align: center;
+    font-style: normal;
+    line-height: normal;
+    background-image: url(img/subscribe_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom left;
+}
+
+.subscribe__txt {
+    margin-top: 30px;
+    width: 360px;
+    font-size: 20px;
+    font-weight: 400;
+    min-height: 99px;
+}
+
+.subscribe__txt_i {
+    font-style: italic;
+}
+
+.subscribe__box {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe__box__title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 167.2%
+}
+
+.subscribe__box__subtite {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 167.2%;
+    margin-bottom: 32px;
+}
+
+.subscribe__form {
+    display: flex;
+    align-items: center;
+}
+
+.subscribe__form__field {
+    min-width: 256px;
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.671;
+    background: rgba(225, 225, 225, 1);
+    padding-left: 22px;
+    border: none;
+    min-height: 49px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    outline: none;
+}
+
+.subscribe__form__field:focus {
+    background: #FFFFFF;
+}
+
+.subscribe__form__btn {
+    min-width: 100px;
+    outline: none;
+    min-height: 49px;
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 400;
+    background: #F16D7F;
+    border: 1px solid #F16D7F;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    transition: all 0.3s;
+}
+
+.subscribe__form__btn:hover {
+    color: #F16D7F;
+    background: #FFF;
+}
+
+.subscribe__form__btn:active {
+    opacity: 0.5;
+}
+
+.footer {
+    background: #222224;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    padding-bottom: 23px;
+}
+
+.footer__copyright {
+    color: #FBFBFB;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer__social {
+    display: flex;
+    gap: 7px;
+}
+
+.footer__social__link {
+    width: 32px;
+    height: 32px;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.footer__social__link:hover {
+    color: #FFF;
+    background: #F16D7F;
+}
+
+.footer__social__link:active {
+    opacity: 0.5;
+}
+
 
 @media (max-width: 1024px) {
     .center {
@@ -384,6 +577,32 @@ body {
 
     .products__button {
         margin-bottom: 70px;
+    }
+
+    .feature {
+        padding-top: 48px;
+        padding-bottom: 64px;
+        flex-direction: column;
+        gap: 48px;
+        align-items: center;
+    }
+
+    .subscribe {
+        flex-direction: column;
+        padding-top: 64px;
+        padding-bottom: 140px;
+    }
+
+    .subscribe__box {
+        width: 100%;
+    }
+
+    .subscribe__info {
+        margin-bottom: 48px;
+    }
+
+    .subscribe__box__subtite {
+        margin-bottom: 27px;
     }
 }
 
@@ -450,5 +669,48 @@ body {
 
     .products__button {
         margin-bottom: 85px;
+    }
+
+    .feature {
+        padding-top: 48px;
+        padding-bottom: 81px;
+        gap: 46px;
+    }
+
+    .feature__title {
+        margin-bottom: 14px;
+    }
+
+    .subscribe {
+        padding-bottom: 110px;
+    }
+
+    .subscribe__info {
+        margin-bottom: 59px;
+    }
+
+    .subscribe__txt {
+        font-size: 18px;
+        min-height: 73px;
+    }
+
+    .subscribe__box__title {
+        line-height: 153.2%
+    }
+
+    .subscribe__box__subtite {
+        font-size: 14px;
+        line-height: 153.2%;
+        margin-bottom: 22px;
+    }
+
+    .footer {
+        flex-direction: column-reverse;
+        padding-top: 43px;
+        padding-bottom: 9px;
+    }
+
+    .footer__social {
+        margin-bottom: 40px;
     }
 }
